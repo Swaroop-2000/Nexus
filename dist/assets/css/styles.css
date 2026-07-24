@@ -222,6 +222,14 @@ ul {
     color: var(--clr-primary);
 }
 
+.nav-link.btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+}
+.nav-link.btn:hover {
+    color: #fff;
+}
+
 .mobile-menu-toggle {
     display: none;
     background: none;
