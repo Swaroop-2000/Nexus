@@ -1,17 +1,17 @@
 /* styles.css */
 
 :root {
-    /* Premium Unique B2B Palette - Inspired by reference but distinct */
-    --clr-bg: #fdfcf9; /* Extremely subtle warm white */
-    --clr-bg-alt: #f3f0e6; /* Soft beige for section contrast */
+    /* Premium Sharp Tech Palette - Crisp White, Slate Greys & Forest Green */
+    --clr-bg: #f8f9fa; /* Ultra-light cool grey background */
+    --clr-bg-alt: #ffffff; /* Pure white for section contrast */
     --clr-surface: #ffffff; 
-    --clr-primary: #1e4532; /* Deep, rich forest green */
-    --clr-primary-hover: #153224;
-    --clr-secondary: #9db2a4; /* Soft sage green for accents */
-    --clr-accent: #c4d4c9; /* Very light sage for borders/backgrounds */
-    --clr-text: #1a1f1b; /* Almost black with green undertone */
-    --clr-text-muted: #5e6b62; /* Muted olive-grey */
-    --clr-border: #e6e3d8;
+    --clr-primary: #1b4932; /* Deep, rich forest green (kept) */
+    --clr-primary-hover: #123322;
+    --clr-secondary: #2b7a52; /* Brighter emerald/sage green for accents (kept green) */
+    --clr-accent: #e2e8f0; /* Soft slate grey for subtle backgrounds */
+    --clr-text: #0f172a; /* Deep charcoal/slate for high-contrast crisp text */
+    --clr-text-muted: #64748b; /* Cool slate grey for muted text */
+    --clr-border: #cbd5e1; /* Crisp, cool grey border */
     
     /* Typography */
     --font-primary: 'Inter', system-ui, sans-serif;
@@ -28,9 +28,9 @@
     --radius: 12px;
     --radius-lg: 24px;
     --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    --shadow-sm: 0 4px 20px rgba(30, 69, 50, 0.04);
-    --shadow-md: 0 10px 40px rgba(30, 69, 50, 0.08);
-    --shadow-lg: 0 20px 60px rgba(30, 69, 50, 0.12);
+    --shadow-sm: 0 4px 20px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 10px 40px rgba(15, 23, 42, 0.06);
+    --shadow-lg: 0 20px 60px rgba(15, 23, 42, 0.08);
 }
 
 /* Base Styles & Utility */
@@ -43,7 +43,7 @@
 body {
     font-family: var(--font-primary);
     background-color: var(--clr-bg);
-    /* Subtle dot grid pattern for a unique tech feel */
+    /* Subtle dot grid pattern using cool grey */
     background-image: radial-gradient(var(--clr-border) 1px, transparent 1px);
     background-size: 30px 30px;
     color: var(--clr-text);
@@ -107,13 +107,13 @@ ul {
 .btn-primary {
     background-color: var(--clr-primary);
     color: #fff;
-    box-shadow: 0 4px 15px rgba(30, 69, 50, 0.2);
+    box-shadow: 0 4px 15px rgba(27, 73, 50, 0.2);
 }
 
 .btn-primary:hover {
     background-color: var(--clr-primary-hover);
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(30, 69, 50, 0.3);
+    box-shadow: 0 8px 25px rgba(27, 73, 50, 0.3);
     color: #fff;
 }
 
@@ -154,7 +154,7 @@ ul {
 
 /* Elegant Header */
 .site-header {
-    background: rgba(253, 252, 249, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--clr-border);
@@ -242,7 +242,7 @@ ul {
 .hero {
     position: relative;
     padding: 120px 0 80px;
-    background: linear-gradient(180deg, rgba(243, 240, 230, 0.5) 0%, rgba(253, 252, 249, 0) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(248,249,250,0) 100%);
     border-bottom: 1px solid var(--clr-border);
 }
 
@@ -331,7 +331,7 @@ ul {
 .feature-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--clr-accent);
+    border-color: var(--clr-border);
 }
 
 .feature-card:hover::before {
@@ -346,7 +346,7 @@ ul {
     justify-content: center;
     width: 64px;
     height: 64px;
-    background: var(--clr-bg-alt);
+    background: var(--clr-bg);
     border-radius: 16px;
     color: var(--clr-primary);
 }
@@ -410,6 +410,7 @@ ul {
     color: #fff;
     transform: scale(1.03);
     box-shadow: var(--shadow-lg);
+    border-color: var(--clr-primary);
 }
 
 .pricing-card.highlighted h3,
@@ -490,7 +491,7 @@ input:focus, textarea:focus {
     outline: none;
     border-color: var(--clr-primary);
     background: #fff;
-    box-shadow: 0 0 0 4px var(--clr-accent);
+    box-shadow: 0 0 0 4px rgba(27, 73, 50, 0.1);
 }
 
 /* CTA */
@@ -502,6 +503,7 @@ input:focus, textarea:focus {
     padding: 5rem 3rem;
     text-align: center;
     color: #fff;
+    box-shadow: var(--shadow-lg);
 }
 
 .cta-section h2 {
@@ -517,9 +519,21 @@ input:focus, textarea:focus {
 
 /* Structured Footer */
 .site-footer {
-    background: var(--clr-bg-alt);
-    border-top: 1px solid var(--clr-border);
+    background: #0f172a; /* Deep slate instead of green or beige for premium contrast */
+    color: #fff;
+    border-top: 1px solid #1e293b;
     padding: 6rem 0 2rem;
+}
+
+.site-footer .logo {
+    color: #fff;
+}
+
+.site-footer .logo-icon {
+    background: #fff;
+}
+.site-footer .logo-icon::before {
+    background: var(--clr-secondary);
 }
 
 .footer-container {
@@ -530,7 +544,7 @@ input:focus, textarea:focus {
 }
 
 .footer-brand p {
-    color: var(--clr-text-muted);
+    color: #94a3b8;
     margin-top: 1.5rem;
     font-size: 1rem;
 }
@@ -546,6 +560,7 @@ input:focus, textarea:focus {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 1.5rem;
+    color: #e2e8f0;
 }
 
 .footer-links li {
@@ -553,25 +568,25 @@ input:focus, textarea:focus {
 }
 
 .footer-links a {
-    color: var(--clr-text-muted);
+    color: #94a3b8;
     font-weight: 500;
 }
 
 .footer-links a:hover {
-    color: var(--clr-primary);
+    color: #fff;
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--clr-border);
+    border-top: 1px solid #1e293b;
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
-    color: var(--clr-text-muted);
+    color: #64748b;
     font-size: 0.875rem;
 }
 
 .credit-line a {
-    color: var(--clr-primary);
+    color: var(--clr-secondary);
     font-weight: 600;
 }
 
@@ -584,7 +599,7 @@ input:focus, textarea:focus {
         direction: ltr;
     }
     .hero-visual {
-        display: none; /* Hide visual on small screens for cleaner look */
+        display: none;
     }
     .hero {
         text-align: center;
