@@ -171,6 +171,12 @@ ul {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
@@ -178,6 +184,11 @@ ul {
     justify-content: space-between;
     align-items: center;
     height: 90px;
+    transition: height 0.3s ease;
+}
+
+.site-header.scrolled .header-container {
+    height: 65px;
 }
 
 .logo {
@@ -329,7 +340,24 @@ ul {
     color: var(--clr-text-muted);
 }
 
+.nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 1rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--clr-border);
+}
 
+.nav-link-login {
+    color: var(--clr-secondary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+.nav-link-login:hover {
+    color: var(--clr-primary);
+}
 
 .mobile-menu-toggle {
     display: none;
