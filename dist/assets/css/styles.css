@@ -1,17 +1,17 @@
 /* styles.css */
 
 :root {
-    /* Premium Sharp Tech Palette - Crisp White, Slate Greys & Forest Green */
-    --clr-bg: #f8f9fa; /* Ultra-light cool grey background */
-    --clr-bg-alt: #ffffff; /* Pure white for section contrast */
+    /* Premium Modern SaaS Palette (Ice Blue, Midnight Navy & Tech Green) */
+    --clr-bg: #f8fafc; /* Ultra-light ice blue/grey for depth */
+    --clr-bg-alt: #ffffff; /* Pure white */
     --clr-surface: #ffffff; 
-    --clr-primary: #1b4932; /* Deep, rich forest green (kept) */
-    --clr-primary-hover: #123322;
-    --clr-secondary: #2b7a52; /* Brighter emerald/sage green for accents (kept green) */
-    --clr-accent: #e2e8f0; /* Soft slate grey for subtle backgrounds */
-    --clr-text: #0f172a; /* Deep charcoal/slate for high-contrast crisp text */
-    --clr-text-muted: #64748b; /* Cool slate grey for muted text */
-    --clr-border: #cbd5e1; /* Crisp, cool grey border */
+    --clr-primary: #047857; /* Vibrant, premium "tech" green */
+    --clr-primary-hover: #065f46;
+    --clr-secondary: #0f172a; /* Deep midnight navy/slate for striking contrast */
+    --clr-accent: #e0e7ff; /* Pale indigo for premium subtle highlights */
+    --clr-text: #0f172a; /* Midnight navy for text (softer than pure black) */
+    --clr-text-muted: #64748b;
+    --clr-border: #e2e8f0;
     
     /* Typography */
     --font-primary: 'Inter', system-ui, sans-serif;
@@ -30,7 +30,7 @@
     --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --shadow-sm: 0 4px 20px rgba(15, 23, 42, 0.04);
     --shadow-md: 0 10px 40px rgba(15, 23, 42, 0.06);
-    --shadow-lg: 0 20px 60px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 20px 60px rgba(15, 23, 42, 0.1);
 }
 
 /* Base Styles & Utility */
@@ -43,7 +43,7 @@
 body {
     font-family: var(--font-primary);
     background-color: var(--clr-bg);
-    /* Subtle dot grid pattern using cool grey */
+    /* Subtle dot grid pattern using pale indigo */
     background-image: radial-gradient(var(--clr-border) 1px, transparent 1px);
     background-size: 30px 30px;
     color: var(--clr-text);
@@ -107,24 +107,24 @@ ul {
 .btn-primary {
     background-color: var(--clr-primary);
     color: #fff;
-    box-shadow: 0 4px 15px rgba(27, 73, 50, 0.2);
+    box-shadow: 0 4px 15px rgba(4, 120, 87, 0.2);
 }
 
 .btn-primary:hover {
     background-color: var(--clr-primary-hover);
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(27, 73, 50, 0.3);
+    box-shadow: 0 8px 25px rgba(4, 120, 87, 0.3);
     color: #fff;
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--clr-primary);
-    border-color: var(--clr-primary);
+    color: var(--clr-secondary);
+    border-color: var(--clr-secondary);
 }
 
 .btn-secondary:hover {
-    background-color: var(--clr-primary);
+    background-color: var(--clr-secondary);
     color: #fff;
     transform: translateY(-3px);
 }
@@ -173,7 +173,7 @@ ul {
 .logo {
     font-size: 2rem;
     font-weight: 800;
-    color: var(--clr-primary);
+    color: var(--clr-secondary);
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -242,7 +242,7 @@ ul {
 .hero {
     position: relative;
     padding: 120px 0 80px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(248,249,250,0) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(248,250,252,0) 100%);
     border-bottom: 1px solid var(--clr-border);
 }
 
@@ -255,13 +255,14 @@ ul {
 
 .hero h1 {
     font-size: clamp(3.5rem, 6vw, 5rem);
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.05;
     margin-bottom: var(--spacing-md);
+    color: var(--clr-secondary);
 }
 
 .hero h1 span {
-    color: var(--clr-secondary);
+    color: var(--clr-primary);
     display: block;
 }
 
@@ -275,7 +276,7 @@ ul {
 .hero-visual {
     position: relative;
     height: 500px;
-    background: var(--clr-bg-alt);
+    background: var(--clr-accent);
     border-radius: var(--radius-lg);
     border: 1px solid var(--clr-border);
     overflow: hidden;
@@ -292,6 +293,7 @@ ul {
 
 .page-header h1 {
     font-size: 4.5rem;
+    color: var(--clr-secondary);
 }
 
 .page-header .lead {
@@ -322,7 +324,7 @@ ul {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 4px;
-    background: var(--clr-secondary);
+    background: var(--clr-primary);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s ease;
@@ -346,9 +348,9 @@ ul {
     justify-content: center;
     width: 64px;
     height: 64px;
-    background: var(--clr-bg);
+    background: var(--clr-accent);
     border-radius: 16px;
-    color: var(--clr-primary);
+    color: var(--clr-secondary);
 }
 
 /* Showcase Panels */
@@ -371,19 +373,20 @@ ul {
 .showcase-text h2 {
     font-size: 2.75rem;
     margin-bottom: 1rem;
+    color: var(--clr-secondary);
 }
 
 .showcase-visual .mockup-placeholder {
     width: 100%;
     aspect-ratio: 4/3;
-    background: var(--clr-bg-alt);
+    background: var(--clr-accent);
     border: 1px solid var(--clr-border);
     border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    color: var(--clr-text-muted);
+    color: var(--clr-secondary);
     box-shadow: var(--shadow-md);
 }
 
@@ -406,11 +409,11 @@ ul {
 }
 
 .pricing-card.highlighted {
-    background: var(--clr-primary);
+    background: var(--clr-secondary);
     color: #fff;
     transform: scale(1.03);
     box-shadow: var(--shadow-lg);
-    border-color: var(--clr-primary);
+    border-color: var(--clr-secondary);
 }
 
 .pricing-card.highlighted h3,
@@ -424,8 +427,11 @@ ul {
 }
 
 .pricing-card.highlighted .btn-primary {
-    background: #fff;
-    color: var(--clr-primary);
+    background: var(--clr-primary);
+    color: #fff;
+}
+.pricing-card.highlighted .btn-primary:hover {
+    background: var(--clr-primary-hover);
 }
 
 .plan-price {
@@ -455,6 +461,10 @@ ul {
     gap: var(--spacing-xl);
 }
 
+.contact-info h2 {
+    color: var(--clr-secondary);
+}
+
 .contact-form-wrapper {
     background: var(--clr-surface);
     padding: 3rem;
@@ -472,7 +482,7 @@ label {
     margin-bottom: 0.5rem;
     font-weight: 600;
     font-size: 0.9rem;
-    color: var(--clr-text);
+    color: var(--clr-secondary);
 }
 
 input, textarea {
@@ -491,14 +501,14 @@ input:focus, textarea:focus {
     outline: none;
     border-color: var(--clr-primary);
     background: #fff;
-    box-shadow: 0 0 0 4px rgba(27, 73, 50, 0.1);
+    box-shadow: 0 0 0 4px rgba(4, 120, 87, 0.1);
 }
 
 /* CTA */
 .cta-section {
     margin: var(--spacing-xl) auto;
     max-width: 1000px;
-    background: var(--clr-primary);
+    background: var(--clr-secondary);
     border-radius: var(--radius-lg);
     padding: 5rem 3rem;
     text-align: center;
@@ -512,16 +522,15 @@ input:focus, textarea:focus {
 }
 
 .cta-section .btn {
-    background: #fff;
-    color: var(--clr-primary);
+    background: var(--clr-primary);
+    color: #fff;
     margin-top: 2rem;
 }
 
 /* Structured Footer */
 .site-footer {
-    background: #0f172a; /* Deep slate instead of green or beige for premium contrast */
+    background: var(--clr-secondary);
     color: #fff;
-    border-top: 1px solid #1e293b;
     padding: 6rem 0 2rem;
 }
 
@@ -533,7 +542,7 @@ input:focus, textarea:focus {
     background: #fff;
 }
 .site-footer .logo-icon::before {
-    background: var(--clr-secondary);
+    background: var(--clr-primary);
 }
 
 .footer-container {
@@ -560,7 +569,7 @@ input:focus, textarea:focus {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 1.5rem;
-    color: #e2e8f0;
+    color: #f8fafc;
 }
 
 .footer-links li {
@@ -577,7 +586,7 @@ input:focus, textarea:focus {
 }
 
 .footer-bottom {
-    border-top: 1px solid #1e293b;
+    border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
@@ -586,7 +595,7 @@ input:focus, textarea:focus {
 }
 
 .credit-line a {
-    color: var(--clr-secondary);
+    color: var(--clr-accent);
     font-weight: 600;
 }
 
