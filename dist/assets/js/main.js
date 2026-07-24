@@ -75,30 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
         });
     }
-
-    // Shrink header on scroll
-    const header = document.querySelector('.site-header');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        }, { passive: true });
-    }
-
-    // Active state highlighting
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        // Only target primary navigation links, not the logo
-        if (!link.classList.contains('logo')) {
-            const linkPath = new URL(link.href).pathname;
-            // Handle root path /index.html matching /
-            if (currentPath === linkPath || (currentPath === '/' && linkPath.endsWith('index.html'))) {
-                link.classList.add('active');
-            }
-        }
-    });
 });
