@@ -76,22 +76,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Intelligent Auto-Hiding Header
+    // Shrink header on scroll
     const header = document.querySelector('.site-header');
     if (header) {
-        let lastScrollY = window.scrollY;
-        
         window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
-            
-            // Hide if scrolling down, show if scrolling up
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                header.classList.add('header-hidden');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
             } else {
-                header.classList.remove('header-hidden');
+                header.classList.remove('scrolled');
             }
-            
-            lastScrollY = currentScrollY;
         }, { passive: true });
     }
+
+    // Active state highlighting
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        // Only target primary navigation links, not the logo
+        if (!link.classList.contains('logo')) {
+            const linkPath = new URL(link.href).pathname;
+            // Handle root path /index.html matching /
+            if (currentPath === linkPath || (currentPath === '/' && linkPath.endsWith('index.html'))) {
+                link.classList.add('active');
+            }
+        }
+    });
 });

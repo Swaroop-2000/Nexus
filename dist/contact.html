@@ -30,7 +30,13 @@
 </script>
 </head>
 <body>
-    <header class="site-header">
+    <div class="top-banner">
+    <div class="container">
+        <span class="banner-badge">New</span> 
+        <span class="banner-text">Nexus Analytics 2.0 is now live. <a href="/product.html">Read the launch notes &rarr;</a></span>
+    </div>
+</div>
+<header class="site-header">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="container header-container">
         <a href="/index.html" class="logo" aria-label="Nexus B2B Home">
@@ -43,9 +49,39 @@
         <nav id="primary-navigation" class="primary-navigation" aria-label="Primary">
             <ul class="nav-list">
                 <li><a href="/index.html" class="nav-link">Home</a></li>
-                <li><a href="/product.html" class="nav-link">Product</a></li>
+                <li class="has-mega-menu">
+                    <a href="/product.html" class="nav-link">Product <span class="dropdown-chevron">▾</span></a>
+                    <div class="mega-menu glass-panel">
+                        <div class="mega-menu-grid">
+                            <a href="/product.html#analytics" class="mega-item">
+                                <div class="mega-icon">📊</div>
+                                <div class="mega-text">
+                                    <span class="mega-title">Analytics <span class="badge-new">New</span></span>
+                                    <span class="mega-desc">Real-time data visualization</span>
+                                </div>
+                            </a>
+                            <a href="/product.html#automation" class="mega-item">
+                                <div class="mega-icon">⚡</div>
+                                <div class="mega-text">
+                                    <span class="mega-title">Automation</span>
+                                    <span class="mega-desc">Streamline your workflows</span>
+                                </div>
+                            </a>
+                            <a href="/product.html#security" class="mega-item">
+                                <div class="mega-icon">🛡️</div>
+                                <div class="mega-text">
+                                    <span class="mega-title">Security</span>
+                                    <span class="mega-desc">Enterprise-grade protection</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="/contact.html" class="nav-link btn btn-primary">Contact Us</a></li>
+                <li class="nav-auth">
+                    <a href="#" class="nav-link-login">Log In</a>
+                    <a href="/contact.html" class="nav-link btn btn-primary">Contact Us</a>
+                </li>
             </ul>
         </nav>
     </div>
