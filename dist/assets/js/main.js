@@ -76,15 +76,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Sticky Header Shrink-on-Scroll
-    const siteHeader = document.querySelector('.site-header');
-    if (siteHeader) {
+    // Intelligent Auto-Hiding Header
+    const header = document.querySelector('.site-header');
+    if (header) {
+        let lastScrollY = window.scrollY;
+        
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                siteHeader.classList.add('scrolled');
+            const currentScrollY = window.scrollY;
+            
+            // Hide if scrolling down, show if scrolling up
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                header.classList.add('header-hidden');
             } else {
-                siteHeader.classList.remove('scrolled');
+                header.classList.remove('header-hidden');
             }
-        });
+            
+            lastScrollY = currentScrollY;
+        }, { passive: true });
     }
 });

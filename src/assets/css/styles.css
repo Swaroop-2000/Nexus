@@ -171,13 +171,11 @@ ul {
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease;
 }
 
-.site-header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
-    border-bottom-color: transparent;
+.site-header.header-hidden {
+    transform: translateY(-100%);
 }
 
 .header-container {
@@ -185,11 +183,6 @@ ul {
     justify-content: space-between;
     align-items: center;
     height: 90px;
-    transition: height 0.3s ease;
-}
-
-.site-header.scrolled .header-container {
-    height: 65px;
 }
 
 .logo {
