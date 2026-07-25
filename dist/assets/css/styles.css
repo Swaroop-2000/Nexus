@@ -1339,10 +1339,15 @@ ul {
 @media (max-width: 1024px) {
     .hero-container {
         grid-template-columns: 1fr;
+        gap: 4rem;
+        margin-top: -2rem;
     }
     .hero-visual-col {
-        height: 400px;
-        order: -1; /* Move visual above text on mobile */
+        height: 450px;
+    }
+    .bento-wrapper {
+        transform: scale(0.85);
+        transform-origin: center top;
     }
     .showcase-item, .contact-grid {
         grid-template-columns: 1fr;
@@ -1394,5 +1399,12 @@ ul {
     }
     .display-title {
         font-size: 3rem;
+    }
+    .bento-wrapper {
+        transform: scale(0.7);
+        transform-origin: center top;
+    }
+    .hero-visual-col {
+        height: 380px;
     }
 }
