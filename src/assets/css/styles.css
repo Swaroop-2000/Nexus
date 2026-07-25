@@ -1357,6 +1357,22 @@ ul {
 
 @media (max-width: 768px) {
     .nav-list { display: none; }
+    .nav-list[aria-expanded="true"] {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--clr-bg);
+        padding: 2rem;
+        gap: 1.5rem;
+        border-top: 1px solid var(--clr-border);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .mega-menu { display: none !important; }
+    .nav-auth { flex-direction: column; width: 100%; align-items: flex-start; }
+    .nav-auth .btn { width: 100%; text-align: center; }
     .mobile-menu-toggle { display: block; }
     
     .footer-container {
