@@ -530,7 +530,7 @@ ul {
 }
 
 .bento-wrapper:hover .card-main {
-    transform: translate(-10%, -20%);
+    transform: translate(-10%, -50%);
     box-shadow: var(--shadow-lg);
 }
 
