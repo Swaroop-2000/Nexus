@@ -105,7 +105,7 @@ ul {
 
 .btn-primary {
     background-color: var(--clr-primary);
-    color: #fff;
+    color: #0f172a;
     box-shadow: 0 4px 15px rgba(4, 120, 87, 0.2);
 }
 
@@ -113,20 +113,20 @@ ul {
     background-color: var(--clr-primary-hover);
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(4, 120, 87, 0.3);
-    color: #fff;
+    color: #0f172a;
 }
 
 .btn-secondary {
     background-color: var(--clr-secondary);
-    color: #fff;
+    color: #0f172a;
     box-shadow: 0 4px 15px rgba(15, 23, 42, 0.15);
 }
 
 .btn-secondary:hover {
-    background-color: #1e293b;
+    background-color: #f1f5f9;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(15, 23, 42, 0.25);
-    color: #fff;
+    color: #0f172a;
 }
 
 .btn-large {
@@ -399,12 +399,12 @@ ul {
     display: inline-block;
     padding: 0.5rem 1rem;
     background: var(--clr-accent);
-    color: var(--clr-secondary);
+    color: #723b13;
     border-radius: var(--radius-pill);
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    border: 1px solid var(--clr-border);
+    border: 1px solid rgba(251, 191, 36, 0.5);
 }
 
 .display-title {
@@ -556,7 +556,7 @@ ul {
 .card-title {
     font-weight: 600;
     font-size: 0.9rem;
-    color: var(--clr-secondary);
+    color: #0f172a;
 }
 
 .mock-chart {
@@ -623,14 +623,14 @@ ul {
 .metric-val {
     font-size: 2rem;
     font-weight: 800;
-    color: var(--clr-secondary);
+    color: #0f172a;
     line-height: 1;
     margin-bottom: 0.25rem;
 }
 
 .metric-label {
     font-size: 0.85rem;
-    color: var(--clr-text-muted);
+    color: #475569;
 }
 
 .user-row {
@@ -648,12 +648,12 @@ ul {
 .u-name {
     font-weight: 600;
     font-size: 0.95rem;
-    color: var(--clr-secondary);
+    color: #0f172a;
 }
 
 .u-time {
     font-size: 0.8rem;
-    color: var(--clr-text-muted);
+    color: #475569;
 }
 
 /* Section Intro */
