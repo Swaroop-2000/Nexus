@@ -526,10 +526,12 @@ ul {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease;
 }
 
-.card-main:hover {
-    transform: translate(-50%, -55%);
+.bento-wrapper:hover .card-main {
+    transform: translate(-10%, -20%);
+    box-shadow: var(--shadow-lg);
 }
 
 .card-header {
@@ -565,14 +567,21 @@ ul {
     align-items: flex-end;
     gap: 15px;
     padding-bottom: 1rem;
+    height: 100%;
 }
 
 .mock-chart .bar {
     flex: 1;
+    height: 100%;
     background: var(--clr-accent);
     border-radius: 4px;
     position: relative;
     overflow: hidden;
+}
+
+@keyframes pulse-bar {
+    0%, 100% { transform: scaleY(0.3); }
+    50% { transform: scaleY(1); }
 }
 
 .mock-chart .bar::after {
@@ -582,13 +591,14 @@ ul {
     background: var(--clr-primary);
     border-radius: 4px;
     transform-origin: bottom;
+    animation: pulse-bar 3s infinite ease-in-out;
 }
 
-.bar.h-40::after { transform: scaleY(0.4); }
-.bar.h-60::after { transform: scaleY(0.6); }
-.bar.h-70::after { transform: scaleY(0.7); }
-.bar.h-90::after { transform: scaleY(0.9); }
-.bar.h-100::after { transform: scaleY(1); }
+.bar.h-40::after { animation-delay: 0.2s; animation-duration: 2.8s; }
+.bar.h-60::after { animation-delay: 0.5s; animation-duration: 3.2s; }
+.bar.h-70::after { animation-delay: 0.1s; animation-duration: 2.5s; }
+.bar.h-90::after { animation-delay: 0.6s; animation-duration: 3.5s; }
+.bar.h-100::after { animation-delay: 0.3s; animation-duration: 2.9s; }
 
 .card-side {
     z-index: 1;
@@ -599,13 +609,24 @@ ul {
     width: 220px;
     top: 50px;
     right: 0px;
+    z-index: 3;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.bento-wrapper:hover .card-top {
+    transform: translate(-10px, -15px);
 }
 
 .card-bottom {
     width: 280px;
     bottom: 80px;
     left: -20px;
-    z-index: 3;
+    z-index: 4;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.bento-wrapper:hover .card-bottom {
+    transform: translate(15px, 10px);
 }
 
 .icon-circle {
