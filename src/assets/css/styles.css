@@ -1099,6 +1099,8 @@ ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .contact-info h2 {
@@ -1157,8 +1159,8 @@ ul {
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--clr-primary);
-    background: #fff;
-    box-shadow: 0 0 0 4px rgba(4, 120, 87, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 4px rgba(4, 120, 87, 0.2);
 }
 
 /* Responsive */
