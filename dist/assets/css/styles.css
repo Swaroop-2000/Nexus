@@ -1357,7 +1357,7 @@ ul {
 
 @media (max-width: 768px) {
     .nav-list { display: none; }
-    .nav-list[aria-expanded="true"] {
+    .primary-navigation[aria-expanded="true"] .nav-list {
         display: flex;
         flex-direction: column;
         position: absolute;
