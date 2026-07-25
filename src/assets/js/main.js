@@ -185,6 +185,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     tcoText.innerHTML = `${userTextLower} &times; $99/mo` + (apiCost > 0 ? ` + API add-on` : '') + ` = $${(monthly * 12).toLocaleString()} annually<br>3-year Total Cost of Ownership: <strong>$${(monthly * 36).toLocaleString()}</strong>`;
                 }
                 
+                sliderUsers.disabled = false;
+                sliderUsers.parentElement.style.opacity = '1';
+                
                 calcTabProf.classList.add('active');
                 calcTabEnt.classList.remove('active');
                 calcPriceProf.classList.add('active');
@@ -200,6 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     breakdownText.innerHTML = `Base $4,999 per month` + (apiCost > 0 ? ` + $${apiCost} API add-on` : '') + `<br>= <strong>$${monthly.toLocaleString()} / month</strong> &middot; billed annually`;
                     tcoText.innerHTML = `$4,999/mo` + (apiCost > 0 ? ` + API add-on` : '') + ` = $${(monthly * 12).toLocaleString()} annually<br>3-year Total Cost of Ownership: <strong>$${(monthly * 36).toLocaleString()}</strong>`;
                 }
+                
+                sliderUsers.disabled = true;
+                sliderUsers.parentElement.style.opacity = '0.5';
                 
                 calcTabEnt.classList.add('active');
                 calcTabProf.classList.remove('active');
