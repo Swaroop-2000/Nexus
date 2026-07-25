@@ -628,6 +628,10 @@
     box-shadow: var(--shadow-lg);
 }
 
+.track-card.active-plan:hover {
+    box-shadow: 0 0 0 2px var(--clr-accent), var(--shadow-lg);
+}
+
 /* Make calculator panel hover subtle */
 .calculator-panel {
     transition: box-shadow 0.3s ease;
