@@ -543,11 +543,6 @@ ul {
     border: 1px solid rgba(255, 255, 255, 0.9);
     border-radius: var(--radius);
     box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease;
-}
-
-.bento-card:hover {
-    transform: translateY(-5px);
 }
 
 @media (max-width: 480px) {
