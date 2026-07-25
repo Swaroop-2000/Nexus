@@ -49,6 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // Hero Trial Form Logic
+        const trialForm = document.getElementById('hero-trial-form');
+        if (trialForm) {
+            trialForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                trialForm.innerHTML = '<div style="color: var(--clr-primary); font-weight: 500; display: flex; align-items: center; gap: 0.75rem; background: rgba(74, 222, 128, 0.1); padding: 1rem 1.5rem; border-radius: 100px; border: 1px solid rgba(74, 222, 128, 0.2);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Check your inbox for your trial link!</div>';
+            });
+        }
+
         // Close menu on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
