@@ -151,16 +151,17 @@ ul {
 /* Skip Link */
 .skip-link {
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-100%);
+    top: -100px;
+    left: 10px;
     background: var(--clr-primary);
     color: white;
-    padding: 12px;
+    padding: 8px 16px;
     z-index: 1001;
-    transition: transform 0.2s ease;
+    transition: top 0.3s ease;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
 }
-.skip-link:focus { transform: translateY(0); }
+.skip-link:focus { top: 10px; }
 
 /* Elegant Floating Pill Header */
 .site-header {
