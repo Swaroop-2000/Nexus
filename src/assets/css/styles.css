@@ -915,6 +915,12 @@ ul {
     top: 50px;
     right: 0px;
     z-index: 3;
+    animation: floatTop 6s ease-in-out infinite;
+}
+
+@keyframes floatTop {
+    0%, 100% { top: 50px; }
+    50% { top: 35px; }
 }
 
 .card-bottom {
@@ -922,6 +928,12 @@ ul {
     bottom: 80px;
     left: -20px;
     z-index: 4;
+    animation: floatBottom 7s ease-in-out infinite;
+}
+
+@keyframes floatBottom {
+    0%, 100% { bottom: 80px; }
+    50% { bottom: 95px; }
 }
 
 .icon-circle {
