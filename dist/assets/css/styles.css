@@ -162,43 +162,52 @@ ul {
 }
 .skip-link:focus { transform: translateY(0); }
 
-/* Elegant Header */
+/* Elegant Floating Pill Header */
 .site-header {
-    background: rgba(28, 77, 50, 0.95);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    position: sticky;
+    background: #f6f7f4; /* Light off-white from screenshot */
+    border-radius: 100px;
+    margin: 1.5rem auto 0;
+    width: 90%;
+    max-width: 1100px;
+    position: fixed;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 .site-header.scrolled {
-    background: rgba(20, 54, 33, 0.98);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(246, 247, 244, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    margin-top: 1rem;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    height: 64px; /* Slimmer for pill shape */
+    padding: 0 0.5rem 0 1.5rem;
     transition: height 0.3s ease;
 }
 
 .site-header.scrolled .header-container {
-    height: 65px;
+    height: 60px;
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--clr-secondary);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1f2937; /* Dark logo for light background */
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    letter-spacing: -0.04em;
+    gap: 0.5rem;
+    letter-spacing: -0.03em;
     font-family: var(--font-heading);
 }
 
@@ -219,26 +228,57 @@ ul {
 
 .nav-list {
     display: flex;
-    gap: var(--spacing-lg);
+    gap: 0.5rem;
     align-items: center;
+    list-style: none;
 }
 
 .nav-link {
-    color: var(--clr-secondary);
-    font-weight: 600;
+    color: #4b5563; /* Dark muted grey */
+    font-weight: 500;
     font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
 }
 
-.nav-link:hover, .nav-link.active {
-    color: var(--clr-primary);
+.nav-link:hover {
+    color: #111827;
+    background: rgba(0,0,0,0.03);
 }
 
-.nav-link.btn {
-    padding: 0.6rem 1.25rem;
-    font-size: 0.85rem;
+.nav-item-active .nav-link {
+    background: #c1d3c5; /* Sage green pill from screenshot */
+    color: #0f172a;
+    font-weight: 600;
 }
-.nav-link.btn:hover {
-    color: #fff;
+
+.nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+.nav-link-login {
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.nav-link-login:hover {
+    color: #111827;
+}
+
+.pill-btn {
+    padding: 0.5rem 1.25rem !important;
+    border-radius: 100px !important;
+    font-size: 0.9rem !important;
 }
 
 /* Mega Menu */
