@@ -1412,4 +1412,26 @@ ul {
     .hero-visual-col {
         height: 420px;
     }
+    .logo-strip {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    .sleek-email-capture {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        gap: 1rem;
+    }
+    .sleek-email-capture input {
+        background: #fff;
+        padding: 1rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--clr-border);
+    }
+    .btn {
+        white-space: nowrap;
+    }
 }
