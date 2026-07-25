@@ -164,11 +164,13 @@ ul {
 
 /* Elegant Floating Pill Header */
 .site-header {
-    background: #f6f7f4; /* Light off-white from screenshot */
+    background: rgba(246, 247, 244, 0.85); /* Glassy off-white */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-radius: 100px;
     margin: 1.5rem auto 0;
-    width: 90%;
-    max-width: 1100px;
+    width: 95%;
+    max-width: 1200px;
     position: fixed;
     top: 0;
     left: 50%;
@@ -389,15 +391,6 @@ ul {
     border-left: 1px solid var(--clr-border);
 }
 
-.nav-link-login {
-    color: var(--clr-secondary);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: var(--transition);
-}
-.nav-link-login:hover {
-    color: var(--clr-primary);
-}
 
 .mobile-menu-toggle {
     display: none;
