@@ -180,7 +180,12 @@
                         <div class="slider-group">
                             <label id="calc-label-users">USER SEATS: 10</label>
                             <input type="range" min="1" max="100" value="10" class="custom-slider" id="calc-slider-users">
-                            <div class="slider-marks"><span>1</span><span>10</span><span>50</span><span>100+</span></div>
+                            <div class="slider-marks" style="display: block; position: relative; height: 1.5rem;">
+                                <span style="position: absolute; left: 0%;">1</span>
+                                <span style="position: absolute; left: 9%; transform: translateX(-50%);">10</span>
+                                <span style="position: absolute; left: 50%; transform: translateX(-50%);">50</span>
+                                <span style="position: absolute; left: 100%; transform: translateX(-100%);">100+</span>
+                            </div>
                         </div>
                         <div class="slider-group">
                             <label id="calc-label-api">API VOLUME (MONTHLY): 1M</label>
@@ -211,8 +216,8 @@
                 <h2 class="huge-serif">How the<br><em>numbers work</em></h2>
                 
                 <div class="breakdown-card reveal-up delay-100">
-                    <h4>PROFESSIONAL &middot; PER SEAT &middot; 10 USERS</h4>
-                    <p>Base $99 per user &times; 10 users<br>= <strong>$990 / month</strong> &middot; billed annually</p>
+                    <h4 id="breakdown-title">PROFESSIONAL &middot; PER SEAT &middot; 10 USERS</h4>
+                    <p id="breakdown-text">Base $99 per user &times; 10 users<br>= <strong>$990 / month</strong> &middot; billed annually</p>
                 </div>
                 
                 <div class="breakdown-card highlight-box">
@@ -222,7 +227,7 @@
                 
                 <div class="breakdown-card">
                     <h4>ANNUAL &amp; 3-YEAR TCO</h4>
-                    <p>10 users &times; $99/mo = $11,880 annually<br>3-year Total Cost of Ownership: <strong>$35,640</strong></p>
+                    <p id="tco-text">10 users &times; $99/mo = $11,880 annually<br>3-year Total Cost of Ownership: <strong>$35,640</strong></p>
                 </div>
             </div>
         </div>

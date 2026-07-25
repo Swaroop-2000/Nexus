@@ -150,6 +150,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalPerUser = document.getElementById('calc-total-per-user');
     const totalAnnual = document.getElementById('calc-total-annual');
     
+    // Breakdown elements
+    const breakdownTitle = document.getElementById('breakdown-title');
+    const breakdownText = document.getElementById('breakdown-text');
+    const tcoText = document.getElementById('tco-text');
+    
     if (calcTabProf && sliderUsers) {
         let currentCalcPlan = 'prof'; // 'prof' or 'ent'
         
@@ -172,6 +177,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 totalPerUser.textContent = `$${Math.round(monthly / users).toLocaleString()}`;
                 totalAnnual.textContent = `$${(monthly * 12).toLocaleString()}/yr`;
                 
+                if (breakdownTitle && breakdownText && tcoText) {
+                    const userTextUpper = users === 1 ? '1 USER' : `${users} USERS`;
+                    const userTextLower = users === 1 ? '1 user' : `${users} users`;
+                    breakdownTitle.innerHTML = `PROFESSIONAL &middot; PER SEAT &middot; ${userTextUpper}`;
+                    breakdownText.innerHTML = `Base $99 per user &times; ${userTextLower}` + (apiCost > 0 ? ` + $${apiCost} API add-on` : '') + `<br>= <strong>$${monthly.toLocaleString()} / month</strong> &middot; billed annually`;
+                    tcoText.innerHTML = `${userTextLower} &times; $99/mo` + (apiCost > 0 ? ` + API add-on` : '') + ` = $${(monthly * 12).toLocaleString()} annually<br>3-year Total Cost of Ownership: <strong>$${(monthly * 36).toLocaleString()}</strong>`;
+                }
+                
                 calcTabProf.classList.add('active');
                 calcTabEnt.classList.remove('active');
                 calcPriceProf.classList.add('active');
@@ -181,6 +194,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 totalMonthly.textContent = `$${monthly.toLocaleString()}`;
                 totalPerUser.textContent = `Unlimited`;
                 totalAnnual.textContent = `$${(monthly * 12).toLocaleString()}/yr`;
+                
+                if (breakdownTitle && breakdownText && tcoText) {
+                    breakdownTitle.innerHTML = `ENTERPRISE &middot; SITE LICENSE &middot; UNLIMITED USERS`;
+                    breakdownText.innerHTML = `Base $4,999 per month` + (apiCost > 0 ? ` + $${apiCost} API add-on` : '') + `<br>= <strong>$${monthly.toLocaleString()} / month</strong> &middot; billed annually`;
+                    tcoText.innerHTML = `$4,999/mo` + (apiCost > 0 ? ` + API add-on` : '') + ` = $${(monthly * 12).toLocaleString()} annually<br>3-year Total Cost of Ownership: <strong>$${(monthly * 36).toLocaleString()}</strong>`;
+                }
                 
                 calcTabEnt.classList.add('active');
                 calcTabProf.classList.remove('active');
