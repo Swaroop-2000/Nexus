@@ -595,6 +595,18 @@
     transform: translate(0, 0);
 }
 
+.reveal-center-up {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 30px));
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-center-up.is-revealed {
+    opacity: 1;
+    transform: translate(-50%, -50%) !important;
+}
+
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }

@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Scroll Reveal Animation System
-    const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+    const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-center-up');
     
     if (revealElements.length > 0) {
         const revealOptions = {
