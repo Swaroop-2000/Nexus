@@ -66,11 +66,22 @@ pages.forEach(page => {
     
     const { title, description, jsonLd, body } = extractMetadata(pageContent);
     
+    let activeHeaderHtml = headerHtml
+        .replace('class="nav-item-active"', '')
+        .replace('class="nav-link active"', 'class="nav-link"');
+        
+    const pageUrl = `/${page}`;
+    activeHeaderHtml = activeHeaderHtml.replace(`href="${pageUrl}" class="nav-link"`, `href="${pageUrl}" class="nav-link active"`);
+    activeHeaderHtml = activeHeaderHtml.replace(`<li><a href="${pageUrl}" class="nav-link active"`, `<li class="nav-item-active"><a href="${pageUrl}" class="nav-link active"`);
+    // Special case for Product which has has-mega-menu
+    activeHeaderHtml = activeHeaderHtml.replace(`<li class="has-mega-menu">\r\n                    <a href="${pageUrl}" class="nav-link active"`, `<li class="has-mega-menu nav-item-active">\r\n                    <a href="${pageUrl}" class="nav-link active"`);
+    activeHeaderHtml = activeHeaderHtml.replace(`<li class="has-mega-menu">\n                    <a href="${pageUrl}" class="nav-link active"`, `<li class="has-mega-menu nav-item-active">\n                    <a href="${pageUrl}" class="nav-link active"`);
+
     let finalHtml = mainLayout
         .replace('{{title}}', title || 'Nexus B2B')
         .replace('{{meta_description}}', description || '')
         .replace('{{json_ld}}', jsonLd || '')
-        .replace('{{header}}', headerHtml)
+        .replace('{{header}}', activeHeaderHtml)
         .replace('{{footer}}', footerHtml)
         .replace('{{content}}', body);
 
