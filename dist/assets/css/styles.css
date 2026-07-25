@@ -759,26 +759,16 @@ ul {
 
 .card-top {
     width: 220px;
-    top: 50px;
-    right: 0px;
+    top: 20px;
+    right: -25px;
     z-index: 3;
-    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.bento-wrapper:hover .card-top {
-    transform: translate(-10px, -15px);
 }
 
 .card-bottom {
     width: 280px;
-    bottom: 80px;
-    left: -20px;
+    bottom: 60px;
+    left: -40px;
     z-index: 4;
-    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.bento-wrapper:hover .card-bottom {
-    transform: translate(15px, 10px);
 }
 
 .icon-circle {
