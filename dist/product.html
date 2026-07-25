@@ -44,21 +44,27 @@
                     <div class="mega-menu">
                         <div class="mega-menu-grid">
                             <a href="/product.html#analytics" class="mega-item">
-                                <div class="mega-icon" style="background: #e8eefa;">📊</div>
+                                <div class="mega-icon" style="background: #f1f5f9;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-4"/></svg>
+                                </div>
                                 <div class="mega-text">
                                     <span class="mega-title">Analytics <span class="badge-new">NEW</span></span>
                                     <span class="mega-desc">Real-time data<br>visualization</span>
                                 </div>
                             </a>
                             <a href="/product.html#automation" class="mega-item">
-                                <div class="mega-icon" style="background: #eef2ff;">⚡</div>
+                                <div class="mega-icon" style="background: #f1f5f9;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                </div>
                                 <div class="mega-text">
                                     <span class="mega-title">Automation</span>
                                     <span class="mega-desc">Streamline your<br>workflows</span>
                                 </div>
                             </a>
                             <a href="/product.html#security" class="mega-item">
-                                <div class="mega-icon" style="background: #e0e7ff;">🛡️</div>
+                                <div class="mega-icon" style="background: #f1f5f9;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
                                 <div class="mega-text">
                                     <span class="mega-title">Security</span>
                                     <span class="mega-desc">Enterprise-grade<br>protection</span>
@@ -81,7 +87,7 @@
         <div class="presentation-layout">
 
     <!-- SLIDE 1: Automated Workflows -->
-    <section class="slide-section slide-1 split-layout">
+    <section id="automation" class="slide-section slide-1 split-layout">
         <div class="split-left">
             <div class="split-content reveal-left">
                 <span class="eyebrow">INTELLIGENT ROUTING</span>
@@ -130,7 +136,7 @@
     </section>
 
     <!-- SLIDE 2: Advanced Analytics -->
-    <section class="slide-section slide-2 split-layout light-right">
+    <section id="analytics" class="slide-section slide-2 split-layout light-right">
         <div class="split-left light-bg" style="order: 2;">
             <div class="split-content reveal-right delay-200">
                 <!-- Premium UI Mockup Card -->
@@ -170,6 +176,52 @@
                 <div class="breakdown-card reveal-up delay-300" style="margin-top: 1rem;">
                     <h4>Key Features</h4>
                     <p style="font-size: 0.9rem;">&middot; Customizable KPI dashboards<br>&middot; Export to PDF/CSV<br>&middot; AI-driven predictive forecasting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: Enterprise Security -->
+    <section id="security" class="slide-section slide-3 split-layout">
+        <div class="split-left">
+            <div class="split-content reveal-left">
+                <span class="eyebrow">ENTERPRISE-GRADE PROTECTION</span>
+                <h2 class="huge-serif">Bank-level<br><em>Security</em></h2>
+                <p class="lead-sub">Your data is your most valuable asset. We protect it with SOC2 Type II compliance, end-to-end encryption, and granular role-based access controls.</p>
+                
+                <div class="philosophy-card reveal-up delay-200" style="margin-top:2rem;">
+                    <ul class="feature-list green-dots">
+                        <li><strong>Zero-trust architecture:</strong> Continuous verification of all user interactions.</li>
+                        <li><strong>Audit trails:</strong> Immutable logging of every system change.</li>
+                        <li><strong>Data residency:</strong> Store your data in the region of your choice.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="split-right" style="background: var(--clr-surface);">
+            <div class="split-content reveal-right delay-200">
+                <!-- Premium UI Mockup Card -->
+                <div class="bento-card glass-panel" style="padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--clr-border);">
+                    <div class="card-header" style="margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                        <div class="traffic-lights"><span></span><span></span><span></span></div>
+                        <div style="font-weight: 600; color: var(--clr-text-muted); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">Access Control Matrix</div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid #3b82f6;">
+                        <div>
+                            <div style="font-weight:600; color:var(--clr-text); font-size:0.9rem;">Admin Role</div>
+                            <div style="color:var(--clr-text-muted); font-size:0.8rem; margin-top:4px;">Full read/write access across all modules</div>
+                        </div>
+                        <div class="tag green">Active</div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid var(--clr-accent);">
+                        <div>
+                            <div style="font-weight:600; color:var(--clr-text); font-size:0.9rem;">Analyst Role</div>
+                            <div style="color:var(--clr-text-muted); font-size:0.8rem; margin-top:4px;">Read-only reporting & dashboard access</div>
+                        </div>
+                        <div class="tag green">Active</div>
+                    </div>
                 </div>
             </div>
         </div>
