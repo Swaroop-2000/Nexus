@@ -602,6 +602,11 @@
 .delay-500 { transition-delay: 500ms; }
 
 /* Enhanced Hover Interactions */
+.track-card.active-plan {
+    border-color: var(--clr-accent);
+    box-shadow: 0 0 0 2px var(--clr-accent);
+}
+
 .track-card, .philosophy-card, .buy-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }

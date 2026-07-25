@@ -112,4 +112,26 @@ document.addEventListener('DOMContentLoaded', () => {
             revealObserver.observe(el);
         });
     }
+
+    // Pricing Plan Toggle Logic
+    const btnProf = document.getElementById('btn-prof');
+    const btnEnt = document.getElementById('btn-ent');
+    const cardProf = document.getElementById('card-prof');
+    const cardEnt = document.getElementById('card-ent');
+
+    if (btnProf && btnEnt && cardProf && cardEnt) {
+        btnProf.addEventListener('click', () => {
+            btnProf.classList.add('active');
+            btnEnt.classList.remove('active');
+            cardProf.classList.add('active-plan');
+            cardEnt.classList.remove('active-plan');
+        });
+        
+        btnEnt.addEventListener('click', () => {
+            btnEnt.classList.add('active');
+            btnProf.classList.remove('active');
+            cardEnt.classList.add('active-plan');
+            cardProf.classList.remove('active-plan');
+        });
+    }
 });
