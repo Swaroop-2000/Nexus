@@ -1,21 +1,21 @@
 /* styles.css */
 
 :root {
-    /* Premium Modern SaaS Palette (Ice Blue, Midnight Navy & Tech Green) */
-    --clr-bg: #f8fafc; /* Ultra-light ice blue/grey for depth */
-    --clr-bg-alt: #ffffff; /* Pure white */
-    --clr-surface: #ffffff; 
-    --clr-primary: #047857; /* Vibrant, premium "tech" green */
-    --clr-primary-hover: #065f46;
-    --clr-secondary: #0f172a; /* Deep midnight navy/slate for striking contrast */
-    --clr-accent: #e0e7ff; /* Pale indigo for premium subtle highlights */
-    --clr-text: #0f172a; /* Midnight navy for text */
-    --clr-text-muted: #64748b;
-    --clr-border: #e2e8f0;
+    /* Premium Deep Green Executive Theme */
+    --clr-bg: #1c4d32; /* Deep forest green */
+    --clr-bg-alt: #245b38; /* Slightly lighter green for contrast panels */
+    --clr-surface: #285e3d; /* Card surface green */
+    --clr-primary: #4ade80; /* Neon/bright green for accents and buttons */
+    --clr-primary-hover: #22c55e;
+    --clr-secondary: #ffffff; /* White for primary headings */
+    --clr-accent: #fbbf24; /* Warm Gold/Yellow for badges */
+    --clr-text: #f1f5f9; /* Off-white for readability */
+    --clr-text-muted: #9ca3af; /* Light sage/grey for secondary text */
+    --clr-border: rgba(255, 255, 255, 0.15); /* Subtle white borders */
     
     /* Typography */
     --font-primary: 'Inter', system-ui, sans-serif;
-    --font-heading: 'Outfit', system-ui, sans-serif;
+    --font-heading: 'Playfair Display', Georgia, serif;
     --font-serif: 'Playfair Display', Georgia, serif;
     
     /* Spacing */
@@ -164,10 +164,10 @@ ul {
 
 /* Elegant Header */
 .site-header {
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(28, 77, 50, 0.95);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -175,8 +175,8 @@ ul {
 }
 
 .site-header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background: rgba(20, 54, 33, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
@@ -262,10 +262,10 @@ ul {
     left: 50%;
     transform: translateX(-50%) translateY(10px);
     width: 600px;
-    background: #ffffff;
-    border: 1px solid #f0f0f0;
+    background: var(--clr-bg-alt);
+    border: 1px solid var(--clr-border);
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     padding: 2rem;
     opacity: 0;
     visibility: hidden;
@@ -373,7 +373,7 @@ ul {
 .hero {
     position: relative;
     padding: 100px 0 160px;
-    background: linear-gradient(135deg, #ffffff 0%, var(--clr-bg) 100%);
+    background: linear-gradient(135deg, var(--clr-bg) 0%, var(--clr-bg-alt) 100%);
     border-bottom: 1px solid var(--clr-border);
     overflow: hidden;
 }
@@ -382,7 +382,7 @@ ul {
     position: absolute;
     top: 0; left: 50%; transform: translateX(-50%);
     width: 100vw; height: 100%;
-    background: radial-gradient(circle at top, rgba(4, 120, 87, 0.05) 0%, transparent 60%);
+    background: radial-gradient(circle at top, rgba(74, 222, 128, 0.05) 0%, transparent 60%);
     z-index: 0;
 }
 
@@ -788,29 +788,44 @@ ul {
     display: flex;
     flex-direction: column;
     transition: var(--transition);
+    position: relative;
+}
+
+.badge-recommended {
+    position: absolute;
+    top: -12px;
+    left: 2rem;
+    background: var(--clr-accent);
+    color: #723b13;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(251, 191, 36, 0.2);
 }
 
 .pricing-card.highlighted {
-    background: var(--clr-secondary);
-    color: #fff;
+    background: var(--clr-surface);
+    color: var(--clr-text);
     transform: scale(1.03);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--clr-secondary);
+    box-shadow: 0 0 0 1px var(--clr-accent), var(--shadow-lg);
+    border-color: var(--clr-accent);
 }
 
 .pricing-card.highlighted h3,
 .pricing-card.highlighted .plan-price,
 .pricing-card.highlighted .plan-desc {
-    color: #fff;
+    color: var(--clr-secondary);
 }
 
 .pricing-card.highlighted .plan-features li {
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--clr-border);
 }
 
 .pricing-card.highlighted .btn-primary {
-    background: var(--clr-primary);
-    color: #fff;
+    background: var(--clr-accent);
+    color: #111827;
 }
 
 .plan-price {
