@@ -30,7 +30,7 @@
                     </div>
                     
                     <!-- Mockup UI elements -->
-                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid var(--clr-accent);">
+                    <div class="mockup-step" style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid var(--clr-accent);">
                         <div>
                             <div style="font-weight:600; color:var(--clr-text); font-size:0.9rem;">Trigger: New Contract Signed</div>
                             <div style="color:var(--clr-text-muted); font-size:0.8rem; margin-top:4px;">Via DocuSign Integration</div>
@@ -38,14 +38,14 @@
                         <div class="icon-circle" style="width:32px; height:32px; font-size:0.8rem;">✓</div>
                     </div>
                     
-                    <div style="width: 2px; height: 20px; background: rgba(255,255,255,0.2); margin: 0 auto;"></div>
+                    <div class="mockup-connector" style="width: 2px; height: 20px; background: rgba(255,255,255,0.2); margin: 0 auto;"></div>
                     
-                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid var(--clr-primary);">
+                    <div class="mockup-step" style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid var(--clr-primary);">
                         <div>
                             <div style="font-weight:600; color:var(--clr-text); font-size:0.9rem;">Action: Provision Licenses</div>
                             <div style="color:var(--clr-text-muted); font-size:0.8rem; margin-top:4px;">Assign 50 Seats to Client Org</div>
                         </div>
-                        <div class="icon-circle" style="width:32px; height:32px; font-size:0.8rem;">⚙</div>
+                        <div class="icon-circle" style="width:32px; height:32px; font-size:0.8rem;"><span class="mockup-icon-spin">⚙</span></div>
                     </div>
                 </div>
             </div>
@@ -65,11 +65,11 @@
                     
                     <!-- Mockup Chart -->
                     <div style="height: 200px; border-bottom: 1px dashed #cbd5e1; border-left: 1px dashed #cbd5e1; position: relative; display: flex; align-items: flex-end; padding-left: 10px; gap: 15px; margin-bottom: 1rem;">
-                        <div style="width: 100%; background: #e2e8f0; height: 40%; border-radius: 4px 4px 0 0;"></div>
-                        <div style="width: 100%; background: #cbd5e1; height: 60%; border-radius: 4px 4px 0 0;"></div>
-                        <div style="width: 100%; background: var(--clr-primary); height: 85%; border-radius: 4px 4px 0 0; opacity: 0.8;"></div>
-                        <div style="width: 100%; background: var(--clr-accent); height: 100%; border-radius: 4px 4px 0 0; position: relative;">
-                            <div style="position:absolute; top:-30px; left:50%; transform:translateX(-50%); background:#0f172a; color:#fff; padding:4px 8px; border-radius:4px; font-size:0.7rem; font-weight:700;">$1.2M</div>
+                        <div class="mockup-bar delay-1" style="width: 100%; background: #e2e8f0; height: 40%; border-radius: 4px 4px 0 0;"></div>
+                        <div class="mockup-bar delay-2" style="width: 100%; background: #cbd5e1; height: 60%; border-radius: 4px 4px 0 0;"></div>
+                        <div class="mockup-bar delay-3" style="width: 100%; background: var(--clr-primary); height: 85%; border-radius: 4px 4px 0 0; opacity: 0.8;"></div>
+                        <div class="mockup-bar delay-4" style="width: 100%; background: var(--clr-accent); height: 100%; border-radius: 4px 4px 0 0; position: relative;">
+                            <div class="float-tooltip" style="position:absolute; top:-30px; left:50%; transform:translateX(-50%); background:#0f172a; color:#fff; padding:4px 8px; border-radius:4px; font-size:0.7rem; font-weight:700;">$1.2M</div>
                         </div>
                     </div>
                     
@@ -124,20 +124,20 @@
                         <div style="font-weight: 600; color: var(--clr-text-muted); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">Access Control Matrix</div>
                     </div>
                     
-                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid #3b82f6;">
+                    <div class="mockup-role" style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid #3b82f6;">
                         <div>
                             <div style="font-weight:600; color:var(--clr-text); font-size:0.9rem;">Admin Role</div>
                             <div style="color:var(--clr-text-muted); font-size:0.8rem; margin-top:4px;">Full read/write access across all modules</div>
                         </div>
-                        <div class="tag green">Active</div>
+                        <div class="tag green pulse-dot" style="padding-left: 20px;">Active</div>
                     </div>
                     
-                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid var(--clr-accent);">
+                    <div class="mockup-role" style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid var(--clr-accent);">
                         <div>
                             <div style="font-weight:600; color:var(--clr-text); font-size:0.9rem;">Analyst Role</div>
                             <div style="color:var(--clr-text-muted); font-size:0.8rem; margin-top:4px;">Read-only reporting & dashboard access</div>
                         </div>
-                        <div class="tag green">Active</div>
+                        <div class="tag green pulse-dot" style="padding-left: 20px;">Active</div>
                     </div>
                 </div>
             </div>

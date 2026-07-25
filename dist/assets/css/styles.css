@@ -550,6 +550,110 @@ ul {
     transform: translateY(-5px);
 }
 
+@media (max-width: 480px) {
+    .huge-serif { font-size: 3rem; }
+    .hero-glow-bg {
+        transform: scale(1.5) translate(-10%, -10%);
+    }
+}
+
+/* --- Premium Mockup Interactions --- */
+.mockup-step {
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+.mockup-step:hover {
+    transform: translateX(10px);
+    background: rgba(255,255,255,0.06) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.mockup-icon-spin {
+    display: inline-block;
+    animation: spinSlow 4s linear infinite;
+}
+@keyframes spinSlow { 100% { transform: rotate(360deg); } }
+
+.mockup-connector {
+    position: relative;
+    overflow: hidden;
+}
+.mockup-connector::after {
+    content: '';
+    position: absolute;
+    top: -100%; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--clr-primary), transparent);
+    animation: flowDown 2.5s infinite linear;
+}
+@keyframes flowDown { 100% { top: 100%; } }
+
+.mockup-bar {
+    transform-origin: bottom;
+    transition: filter 0.3s ease;
+    animation: growBar 3s ease-in-out infinite alternate;
+}
+.mockup-bar:hover {
+    filter: brightness(1.2);
+}
+.mockup-bar.delay-1 { animation-delay: 0s; }
+.mockup-bar.delay-2 { animation-delay: 0.4s; }
+.mockup-bar.delay-3 { animation-delay: 0.8s; }
+.mockup-bar.delay-4 { animation-delay: 1.2s; }
+
+@keyframes growBar {
+    0% { transform: scaleY(0.9); }
+    100% { transform: scaleY(1.05); }
+}
+
+.float-tooltip {
+    animation: floatTooltip 3s ease-in-out infinite;
+}
+@keyframes floatTooltip {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -6px); }
+}
+
+.mockup-role {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.mockup-role:hover {
+    transform: scale(1.02);
+}
+.mockup-role::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
+    transform: skewX(-20deg);
+}
+.mockup-role:hover::before {
+    animation: shimmerRole 1s forwards;
+}
+@keyframes shimmerRole { 100% { left: 200%; } }
+
+.pulse-dot {
+    position: relative;
+    margin-left: 12px;
+}
+.pulse-dot::before {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: 0 0 0 0 currentColor;
+    animation: pulseActive 2s infinite;
+}
+@keyframes pulseActive {
+    70% { box-shadow: 0 0 0 6px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
 .card-main {
     width: 320px;
     height: 380px;
