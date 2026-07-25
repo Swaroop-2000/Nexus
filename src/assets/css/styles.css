@@ -550,6 +550,28 @@ ul {
     transform: translateY(-5px);
 }
 
+.reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-center-up {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 30px));
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-center-up.active {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
 @media (max-width: 480px) {
     .huge-serif { font-size: 3rem; }
     .hero-glow-bg {
