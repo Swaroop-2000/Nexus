@@ -134,4 +134,66 @@ document.addEventListener('DOMContentLoaded', () => {
             cardProf.classList.remove('active-plan');
         });
     }
+
+    // Live Pricing Calculator Logic
+    const calcTabProf = document.getElementById('calc-tab-prof');
+    const calcTabEnt = document.getElementById('calc-tab-ent');
+    const calcPriceProf = document.getElementById('calc-price-prof');
+    const calcPriceEnt = document.getElementById('calc-price-ent');
+    
+    const sliderUsers = document.getElementById('calc-slider-users');
+    const labelUsers = document.getElementById('calc-label-users');
+    const sliderApi = document.getElementById('calc-slider-api');
+    const labelApi = document.getElementById('calc-label-api');
+    
+    const totalMonthly = document.getElementById('calc-total-monthly');
+    const totalPerUser = document.getElementById('calc-total-per-user');
+    const totalAnnual = document.getElementById('calc-total-annual');
+    
+    if (calcTabProf && sliderUsers) {
+        let currentCalcPlan = 'prof'; // 'prof' or 'ent'
+        
+        const updateCalculator = () => {
+            const users = parseInt(sliderUsers.value);
+            const apiLevel = parseInt(sliderApi.value);
+            
+            let apiCost = 0;
+            let apiText = '1M';
+            if(apiLevel === 2) { apiCost = 100; apiText = '5M'; }
+            if(apiLevel === 3) { apiCost = 250; apiText = '10M'; }
+            if(apiLevel === 4) { apiCost = 1000; apiText = '50M+'; }
+            
+            labelUsers.textContent = `USER SEATS: ${users}`;
+            labelApi.textContent = `API VOLUME (MONTHLY): ${apiText}`;
+            
+            if (currentCalcPlan === 'prof') {
+                const monthly = (users * 99) + apiCost;
+                totalMonthly.textContent = `$${monthly.toLocaleString()}`;
+                totalPerUser.textContent = `$${Math.round(monthly / users).toLocaleString()}`;
+                totalAnnual.textContent = `$${(monthly * 12).toLocaleString()}/yr`;
+                
+                calcTabProf.classList.add('active');
+                calcTabEnt.classList.remove('active');
+                calcPriceProf.classList.add('active');
+                calcPriceEnt.classList.remove('active');
+            } else {
+                const monthly = 4999 + apiCost;
+                totalMonthly.textContent = `$${monthly.toLocaleString()}`;
+                totalPerUser.textContent = `Unlimited`;
+                totalAnnual.textContent = `$${(monthly * 12).toLocaleString()}/yr`;
+                
+                calcTabEnt.classList.add('active');
+                calcTabProf.classList.remove('active');
+                calcPriceEnt.classList.add('active');
+                calcPriceProf.classList.remove('active');
+            }
+        };
+        
+        calcTabProf.addEventListener('click', () => { currentCalcPlan = 'prof'; updateCalculator(); });
+        calcTabEnt.addEventListener('click', () => { currentCalcPlan = 'ent'; updateCalculator(); });
+        sliderUsers.addEventListener('input', updateCalculator);
+        sliderApi.addEventListener('input', updateCalculator);
+        
+        updateCalculator(); // initialize values
+    }
 });

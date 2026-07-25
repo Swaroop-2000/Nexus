@@ -64,42 +64,42 @@
                 
                 <div class="calculator-panel reveal-up delay-200">
                     <div class="calc-tabs">
-                        <button class="calc-tab active">Professional</button>
-                        <button class="calc-tab">Enterprise</button>
+                        <button class="calc-tab active" id="calc-tab-prof">Professional</button>
+                        <button class="calc-tab" id="calc-tab-ent">Enterprise</button>
                     </div>
                     <div class="calc-prices">
-                        <div class="calc-price-col active">
+                        <div class="calc-price-col active" id="calc-price-prof">
                             <div class="val">$99</div>
                             <div class="lbl">Per Seat / Mo</div>
                         </div>
-                        <div class="calc-price-col">
+                        <div class="calc-price-col" id="calc-price-ent">
                             <div class="val">$4,999/mo</div>
                             <div class="lbl">Site License</div>
                         </div>
                     </div>
                     <div class="calc-sliders">
                         <div class="slider-group">
-                            <label>USER SEATS: 10</label>
-                            <input type="range" min="1" max="100" value="10" class="custom-slider">
+                            <label id="calc-label-users">USER SEATS: 10</label>
+                            <input type="range" min="1" max="100" value="10" class="custom-slider" id="calc-slider-users">
                             <div class="slider-marks"><span>1</span><span>10</span><span>50</span><span>100+</span></div>
                         </div>
                         <div class="slider-group">
-                            <label>API VOLUME (MONTHLY): 1M</label>
-                            <input type="range" min="1" max="4" value="1" class="custom-slider">
+                            <label id="calc-label-api">API VOLUME (MONTHLY): 1M</label>
+                            <input type="range" min="1" max="4" value="1" class="custom-slider" id="calc-slider-api">
                             <div class="slider-marks"><span>1M</span><span>5M</span><span>10M</span><span>50M+</span></div>
                         </div>
                     </div>
                     <div class="calc-totals">
                         <div>
-                            <div class="val">$990</div>
+                            <div class="val" id="calc-total-monthly">$990</div>
                             <div class="lbl">Monthly quote</div>
                         </div>
                         <div>
-                            <div class="val">$99</div>
+                            <div class="val" id="calc-total-per-user">$99</div>
                             <div class="lbl">Per user</div>
                         </div>
                         <div>
-                            <div class="val highlight-val">$11,880/yr</div>
+                            <div class="val highlight-val" id="calc-total-annual">$11,880/yr</div>
                             <div class="lbl">Annual value</div>
                         </div>
                     </div>
