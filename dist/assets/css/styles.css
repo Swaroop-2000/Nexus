@@ -1271,6 +1271,39 @@ ul {
     font-weight: 600;
 }
 
+.footer-bottom-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.student-credit {
+    font-size: 0.9rem;
+    color: var(--clr-text);
+    background: rgba(23, 199, 132, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(23, 199, 132, 0.2);
+    display: inline-block;
+}
+
+.student-credit strong {
+    color: var(--clr-primary);
+    letter-spacing: 0.05em;
+}
+
+.student-email {
+    color: var(--clr-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.student-email:hover {
+    color: #129965; /* Darker green */
+    text-decoration: underline;
+}
+
 /* Contact & Forms */
 .contact-grid {
     display: grid;
