@@ -90,13 +90,26 @@
                 </li>
                 <li class="nav-item-active"><a href="/pricing.html" class="nav-link active">Pricing</a></li>
                 <li class="nav-auth">
-                    <a href="#" onclick="alert('Under progress'); return false;" class="nav-link-login">Log In</a>
+                    <a href="#" class="nav-link-login" id="login-trigger">Log In</a>
                     <a href="/contact.html" class="nav-link btn btn-primary pill-btn">Contact Us</a>
                 </li>
             </ul>
         </nav>
     </div>
 </header>
+
+<!-- Premium Custom Modal for Login -->
+<div class="custom-modal-overlay" id="login-modal">
+    <div class="custom-modal-box">
+        <button class="modal-close" id="login-modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="modal-title">Portal In Progress</h3>
+        <p class="modal-desc">The Nexus B2B client login portal is currently under active development. Please check back soon.</p>
+        <button class="btn btn-primary modal-btn-close" id="login-modal-btn">Got it</button>
+    </div>
+</div>
 
     <main id="main-content">
         <div class="pricing-presentation">

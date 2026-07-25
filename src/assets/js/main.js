@@ -23,6 +23,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.style.background = '#fff';
             }
         });
+        
+        // Custom Login Modal Logic
+        const loginTrigger = document.getElementById('login-trigger');
+        const loginModal = document.getElementById('login-modal');
+        const loginModalClose = document.getElementById('login-modal-close');
+        const loginModalBtn = document.getElementById('login-modal-btn');
+        
+        if (loginTrigger && loginModal) {
+            loginTrigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                loginModal.classList.add('active');
+            });
+            
+            const closeModal = () => {
+                loginModal.classList.remove('active');
+            };
+            
+            if (loginModalClose) loginModalClose.addEventListener('click', closeModal);
+            if (loginModalBtn) loginModalBtn.addEventListener('click', closeModal);
+            
+            // Close on clicking outside the box
+            loginModal.addEventListener('click', (e) => {
+                if (e.target === loginModal) closeModal();
+            });
+        }
 
         // Close menu on escape key
         document.addEventListener('keydown', (e) => {
